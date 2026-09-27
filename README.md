@@ -10,6 +10,8 @@ npm run dev
 
 Open http://localhost:5173. To create deployable files, run `npm run build`. Publish the contents of `dist/` on a static host. `npm run preview` serves that build locally.
 
+Vercel is configured through `vercel.json` to run the build and deploy the generated `dist/` directory.
+
 ## Content
 
 - Project previews are original HTML/CSS interface illustrations, not real application screenshots. Each case study explicitly explains this.
