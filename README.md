@@ -18,6 +18,8 @@ Vercel is configured through `vercel.json` to run the build and deploy the gener
 - Zakrily's custom case study includes the supplied video, prototype link, pitch deck, and team roles. Its template is in `index.html`; deck assets are in `assets/zakrily/`.
 - Other project descriptions are in `app.js`; page text and contact links are in `index.html`.
 - Typography loads DM Sans and IBM Plex Mono from Google Fonts, with local system fallbacks. All artwork and skill icons are local.
+- Decorative stars, arrows, and feature icons use the shared SVG symbols in `assets/icons.svg` so iOS and desktop render the same artwork. Use these symbols instead of emoji for new icons.
+- The portfolio uses its original light palette regardless of the device's dark mode setting.
 
 ## Interactions and accessibility
 

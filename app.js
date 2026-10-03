@@ -46,7 +46,7 @@ document.addEventListener('visibilitychange', startWords);
 
 const projects = {
   kalemly: {
-    index: '02', title: 'KalemlyAI', category: 'AI SAAS · RAG · TIPS HINDAWI CHALLENGE · JULY 2026',
+    index: '02', title: 'KalemlyAI', category: 'AI SAAS Â· RAG Â· TIPS HINDAWI CHALLENGE Â· JULY 2026',
     lead: 'Your business knowledge. A helpful answer, in two languages.',
   },
   zakrily: {
@@ -54,7 +54,7 @@ const projects = {
     lead: 'A more personal way to learn. Built around understanding.',
   },
   autobrief: {
-    index: '03', title: 'Autobrief', category: 'MULTIMODAL AI · AI BRIEF GENERATION · GDG EUI HACKATHON · DEC 2025',
+    index: '03', title: 'Autobrief', category: 'MULTIMODAL AI Â· AI BRIEF GENERATION Â· GDG EUI HACKATHON Â· DEC 2025',
     lead: 'From scattered client inputs to a structured starting point.',
   },
   care: {
@@ -217,7 +217,7 @@ const svg = (content, viewBox = '0 0 32 32') => `<svg viewBox="${viewBox}" fill=
 const toolIcons = [
   { name: 'n8n', icon: svg('<path d="M7 16h7l6-8h5M14 16l6 8h5" stroke="#ea527a" stroke-width="2.7"/><circle cx="5" cy="16" r="3" fill="#ea527a"/><circle cx="15" cy="16" r="3" fill="#ea527a"/><circle cx="26" cy="8" r="3" fill="#ea527a"/><circle cx="26" cy="24" r="3" fill="#ea527a"/>') },
   { name: 'VS Code', icon: svg('<path d="M23 2 10 14 4 9 1 11v10l3 2 6-5 13 12 8-4V6L23 2ZM5 17v-2l3 1-3 1Zm18 5-10-6 10-6v12Z" fill="#2499e5"/>') },
-  { name: 'Hugging Face', icon: '<span class="emoji-icon">ðŸ¤—</span>' },
+  { name: 'Hugging Face', icon: '<svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#hugging-face"></use></svg>' },
   { name: 'React', icon: svg('<g stroke="#38aeca" stroke-width="1.4"><ellipse cx="16" cy="16" rx="15" ry="5.5"/><ellipse cx="16" cy="16" rx="15" ry="5.5" transform="rotate(60 16 16)"/><ellipse cx="16" cy="16" rx="15" ry="5.5" transform="rotate(120 16 16)"/></g><circle cx="16" cy="16" r="2.7" fill="#38aeca"/>') },
   { name: 'Python', icon: svg('<path d="M16 2c-7 0-7 2-7 8h9v2H6c-6 0-6 14 0 14h3v-6c0-4 3-5 7-5h6c4 0 4-3 4-6V7c0-4-3-5-10-5Z" fill="#3978a4"/><path d="M16 30c7 0 7-2 7-8h-9v-2h12c6 0 6-14 0-14h-3v6c0 4-3 5-7 5h-6c-4 0-4 3-4 6v2c0 4 3 5 10 5Z" fill="#eec84a"/><circle cx="13" cy="6" r="1.3" fill="white"/><circle cx="19" cy="26" r="1.3" fill="white"/>') },
   { name: 'Figma', icon: svg('<path d="M11 1a5 5 0 0 0 0 10h5V1h-5Z" fill="#f24e1e"/><path d="M16 1h5a5 5 0 0 1 0 10h-5Z" fill="#ff7262"/><path d="M11 11a5 5 0 0 0 0 10h5V11Z" fill="#a259ff"/><circle cx="21" cy="16" r="5" fill="#1abcfe"/><path d="M11 21a5 5 0 1 0 5 5v-5Z" fill="#0acf83"/>') },

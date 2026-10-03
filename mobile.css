@@ -6,8 +6,8 @@ body.menu-open { overflow: hidden; }
 .tool-icon-button { display: grid; place-items: center; width: 62px; height: 62px; padding: 0; border: 1px solid #cbd2bd; background: #f5f6ee; border-radius: 15px; pointer-events: auto; transition: background .25s, transform .25s; }
 .tool-icon-name { display: none; }
 .tool-icon-button.is-selected { background: #d2e4b5; }
-.tool-icon-button.is-selected :is(svg, .emoji-icon, .letter-icon) { transform: rotate(-10deg) scale(1.12); }
-.tool-icon-button :is(svg, .emoji-icon, .letter-icon) { transition: transform .35s cubic-bezier(.2,.8,.2,1); }
+.tool-icon-button.is-selected :is(svg, .letter-icon) { transform: rotate(-10deg) scale(1.12); }
+.tool-icon-button :is(svg, .letter-icon) { transition: transform .35s cubic-bezier(.2,.8,.2,1); }
 .mobile-tool-hint { display: none; }
 
 @media (max-width: 960px) {
@@ -111,7 +111,6 @@ body.menu-open { overflow: hidden; }
   .static-tool-icons { order: 1; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px 6px; margin: 28px 0 16px; padding: 8px 0; pointer-events: auto; }
   .tool-icon-button { width: 100%; height: 90px; gap: 8px; align-content: center; background: transparent; border: 0; border-radius: 3px; color: #56604a; }
   .static-tool-icons svg { width: 34px; height: 34px; }
-  .static-tool-icons .emoji-icon { font-size: 34px; line-height: 34px; }
   .static-tool-icons .letter-icon { font-size: 26px; line-height: 34px; }
   .tool-icon-name { display: block; font: 10px/1.5 var(--mono); }
   .mobile-motion .tool-icon-button { transform: translateY(var(--tool-lift, 0px)); transition: background .25s; }
@@ -206,7 +205,7 @@ body.menu-open { overflow: hidden; }
   .mobile-motion::before { display: none; }
   .mobile-reveal { opacity: 1 !important; transform: none !important; }
   .mobile-motion .hero-line { translate: none; }
-  .tool-icon-button, .tool-icon-button.is-selected :is(svg, .emoji-icon, .letter-icon) { transform: none !important; }
+  .tool-icon-button, .tool-icon-button.is-selected :is(svg, .letter-icon) { transform: none !important; }
 }
 
 /* Persistent navigation and contact links across compact screens. */
