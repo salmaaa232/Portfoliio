@@ -14,13 +14,13 @@ Vercel is configured through `vercel.json` to run the build and deploy the gener
 
 ## Content
 
-- Project previews are original HTML/CSS interface illustrations, not real application screenshots. Each case study explicitly explains this.
-- Zakrily is labeled as a prototype, with its supplied feature description presented as the product vision.
-- Project descriptions are in `app.js`; page text and contact links are in `index.html`.
-- No fabricated project URLs, performance metrics, customer counts, or personal contribution for Zakrily are included.
-- Replace illustrations with actual product screenshots when available, and add verified demo or repository links to the case studies.
+- Project covers are original HTML/CSS interface illustrations, not application screenshots.
+- Zakrily's custom case study includes the supplied video, prototype link, pitch deck, and team roles. Its template is in `index.html`; deck assets are in `assets/zakrily/`.
+- Other project descriptions are in `app.js`; page text and contact links are in `index.html`.
 - Typography loads DM Sans and IBM Plex Mono from Google Fonts, with local system fallbacks. All artwork and skill icons are local.
 
 ## Interactions and accessibility
 
-Rotating hero typography, project hover previews, native accessible project dialogs, skill-icon mouse trail, email clipboard action, keyboard focus indicators, responsive layouts, and reduced-motion support. The icon trail is limited to the toolkit and disabled on touch devices. Text content does not depend on hover interactions.
+Rotating hero typography, a reversible scroll-linked project ribbon, native accessible dialogs, a skill-icon mouse trail, email clipboard action, keyboard focus indicators, and reduced-motion support.
+
+`mobile.css` and `mobile.js` provide the compact navigation dialog (up to 960px), phone layouts (up to 760px), scroll-linked artwork, and tappable toolkit icons. Mobile motion runs only on scroll frames while the page is visible and no dialog is open. Horizontal touch gestures temporarily pause the project ribbon's page-driven motion. The desktop mouse trail remains limited to pointer devices; text content never depends on hover.

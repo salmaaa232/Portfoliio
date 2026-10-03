@@ -1,5 +1,6 @@
-import { mkdir, copyFile } from 'node:fs/promises';
-const files = ['index.html', 'styles.css', 'app.js', 'favicon.svg'];
+import { mkdir, copyFile, cp } from 'node:fs/promises';
+const files = ['index.html', 'styles.css', 'mobile.css', 'app.js', 'mobile.js', 'favicon.svg'];
 await mkdir('dist', { recursive: true });
 for (const file of files) await copyFile(file, `dist/${file}`);
-console.log(`Built ${files.length} files into dist/`);
+await cp('assets', 'dist/assets', { recursive: true });
+console.log(`Built ${files.length} files and project assets into dist/`);

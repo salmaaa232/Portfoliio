@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="theme-color" content="#f5f4ef" />
   <meta name="description" content="Salma Hammouda — AI & software engineer building SaaS products, intelligent tools, and creative ways to solve everyday problems." />
   <meta property="og:title" content="Salma Hammouda — Imagination, engineered." />
@@ -11,15 +11,33 @@
   <title>Salma Hammouda — Imagination, engineered.</title>
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/mobile.css" />
   <script type="module" src="/app.js"></script>
+  <script type="module" src="/mobile.js"></script>
 </head>
 <body>
   <a class="skip-link" href="#work">Skip to selected work</a>
+  <div class="header-space">
   <header class="site-header">
     <a class="wordmark" href="#home" aria-label="Salma Hammouda home">SALMA<br>HAMMOUDA<span class="wordmark-dot"></span></a>
     <nav aria-label="Main navigation"><a href="#about">ABOUT</a><a href="#work">WORK <span>04</span></a><a href="#experience">EXPERIENCE</a><a href="#education">EDUCATION</a><a href="#toolkit">TOOLKIT</a></nav>
-    <a class="header-contact" href="mailto:salma.hammoouda@gmail.com">LET’S TALK <span aria-hidden="true">↗</span></a>
+    <a class="header-contact" href="#contact">LET’S TALK <span aria-hidden="true">↗</span></a>
+    <button class="menu-toggle" type="button" aria-haspopup="dialog" aria-controls="mobile-menu" aria-expanded="false">MENU <span class="menu-mark" aria-hidden="true"><i></i><i></i></span></button>
   </header>
+  </div>
+
+  <dialog class="mobile-menu" id="mobile-menu" aria-labelledby="mobile-menu-title">
+    <div class="mobile-menu-top"><span id="mobile-menu-title">TAKE A LOOK AROUND.</span><button class="mobile-menu-close" type="button" aria-label="Close navigation">CLOSE <span aria-hidden="true">×</span></button></div>
+    <nav aria-label="Mobile navigation">
+      <a href="#about"><span class="menu-index" aria-hidden="true">01</span><span>About</span><span class="menu-arrow" aria-hidden="true">↗</span></a>
+      <a href="#work"><span class="menu-index" aria-hidden="true">02</span><span>Work</span><span class="menu-arrow" aria-hidden="true">↗</span></a>
+      <a href="#experience"><span class="menu-index" aria-hidden="true">03</span><span>Experience</span><span class="menu-arrow" aria-hidden="true">↗</span></a>
+      <a href="#education"><span class="menu-index" aria-hidden="true">04</span><span>Education</span><span class="menu-arrow" aria-hidden="true">↗</span></a>
+      <a href="#toolkit"><span class="menu-index" aria-hidden="true">05</span><span>Toolkit</span><span class="menu-arrow" aria-hidden="true">↗</span></a>
+    </nav>
+    <a class="mobile-menu-contact" href="#contact">LET’S MAKE SOMETHING GOOD. <span aria-hidden="true">↗</span></a>
+    <div class="mobile-menu-footer"><span>SALMA HAMMOUDA</span><span>ALEXANDRIA, EGYPT</span></div>
+  </dialog>
 
   <main>
     <section class="hero" id="home" aria-labelledby="hero-title">
@@ -34,10 +52,28 @@
     </section>
 
     <section class="work-section" id="work" aria-labelledby="work-title">
+      <div class="work-sticky">
       <div class="section-heading"><h2 id="work-title">SELECTED WORK <span>(04)</span></h2><span>IDEAS MADE REAL.</span></div>
-      <div class="project-grid">
-        <article class="project project-kalemly reveal">
+      <div class="work-navigation"><span id="work-hint">SCROLL TO EXPLORE <span aria-hidden="true">&harr;</span></span><div class="work-arrows"><button class="work-prev" aria-label="Previous project" aria-controls="project-track">&larr;</button><button class="work-next" aria-label="Next project" aria-controls="project-track">&rarr;</button></div></div>
+      <div class="project-grid" id="project-track" role="region" aria-label="Selected projects" aria-describedby="work-hint" tabindex="0">
+        <article class="project project-zakrily">
+          <button class="project-cover zakrily-cover" data-project="zakrily" aria-label="Explore Zakrily prototype case study">
+            <span class="project-art">
+            <span class="cover-topline"><span class="zakrily-brand">zakrily<span>✳</span></span><span class="prototype-tag">PROTOTYPE</span></span>
+            <span class="zakrily-headline">Less memorizing.<br>More <em>lightbulb moments.</em></span>
+            <span class="project-stage study-stage">
+            <span class="study-window" aria-hidden="true"><span class="study-top"><strong>Your next little breakthrough.</strong><span>✦</span></span><span class="study-greeting">Let’s make it click.</span><span class="study-sub">A little progress, every day.</span><span class="subject-row"><span class="subject-icon">∑</span><span><strong>Mathematics</strong><small>One problem. A new perspective.</small></span><span>↗</span></span><span class="subject-row"><span class="subject-icon english">Aa</span><span><strong>Languages</strong><small>Find your voice. Start a conversation.</small></span><span>↗</span></span><span class="subject-row"><span class="subject-icon science">⚛</span><span><strong>Science</strong><small>Don’t just read it. Try it.</small></span><span>↗</span></span><span class="nawara-note"><span class="nawara-flower">✿</span><span><strong>Meet Nawara</strong><small>A curious mind’s study companion.</small></span><span>→</span></span></span>
+            </span>
+            <span class="zakrily-doodle" aria-hidden="true">✻</span><span class="cover-bottomline"><span>MADE FOR CURIOUS MINDS.</span><span class="cover-arrow">↗</span></span>
+            </span>
+          </button>
+          <div class="project-caption"><div><span class="project-number">01 /</span><h3>Zakrily</h3></div><span class="project-type">AI EDUCATION · PRODUCT PROTOTYPE</span><button class="caption-link" data-project="zakrily" aria-label="Read about Zakrily">↗</button></div>
+          <p class="project-summary">A more personal way to learn Egypt’s school curriculum.</p>
+        </article>
+
+        <article class="project project-kalemly">
           <button class="project-cover kalemly-cover" data-project="kalemly" aria-label="Explore KalemlyAI case study">
+            <span class="project-art">
             <span class="cover-topline"><span class="cover-brand">kalemly<span>ai</span><span class="brand-spark">✳</span></span><span class="cover-label">CONVERSATIONS, CONNECTED.</span></span>
             <span class="kalemly-headline">Your knowledge.<br>Their next answer.</span>
             <span class="project-stage kalemly-stage">
@@ -46,47 +82,40 @@
             <span class="stage-chips"><span class="floating-chip chip-language">EN <span>↔</span> ع</span><span class="floating-chip chip-knowledge"><span>✳</span> Built on your knowledge</span></span>
             </span>
             <span class="cover-bottomline"><span>ARABIC + ENGLISH. ONE CONVERSATION.</span><span class="cover-arrow">↗</span></span>
+            </span>
           </button>
-          <div class="project-caption"><div><span class="project-number">01 /</span><h3>KalemlyAI</h3></div><span class="project-type">AI SAAS · RAG · CONVERSATIONAL AI</span><button class="caption-link" data-project="kalemly" aria-label="Read about KalemlyAI">↗</button></div>
+          <div class="project-caption"><div><span class="project-number">02 /</span><h3>KalemlyAI</h3></div><span class="project-type">AI SAAS · RAG · CONVERSATIONAL AI</span><button class="caption-link" data-project="kalemly" aria-label="Read about KalemlyAI">↗</button></div>
           <p class="project-summary">Business knowledge, turned into bilingual customer support.</p>
         </article>
 
-        <article class="project project-zakrily reveal">
-          <button class="project-cover zakrily-cover" data-project="zakrily" aria-label="Explore Zakrily prototype case study">
-            <span class="cover-topline"><span class="zakrily-brand">zakrily<span>✳</span></span><span class="prototype-tag">PROTOTYPE</span></span>
-            <span class="zakrily-headline">Less memorizing.<br>More <em>lightbulb moments.</em></span>
-            <span class="project-stage study-stage">
-            <span class="study-window" aria-hidden="true"><span class="study-top"><strong>Your next little breakthrough.</strong><span>✦</span></span><span class="study-greeting">Let’s make it click.</span><span class="study-sub">A little progress, every day.</span><span class="subject-row"><span class="subject-icon">∑</span><span><strong>Mathematics</strong><small>One problem. A new perspective.</small></span><span>↗</span></span><span class="subject-row"><span class="subject-icon english">Aa</span><span><strong>Languages</strong><small>Find your voice. Start a conversation.</small></span><span>↗</span></span><span class="subject-row"><span class="subject-icon science">⚛</span><span><strong>Science</strong><small>Don’t just read it. Try it.</small></span><span>↗</span></span><span class="nawara-note"><span class="nawara-flower">✿</span><span><strong>Meet Nawara</strong><small>A curious mind’s study companion.</small></span><span>→</span></span></span>
-            </span>
-            <span class="zakrily-doodle" aria-hidden="true">✻</span><span class="cover-bottomline"><span>MADE FOR CURIOUS MINDS.</span><span class="cover-arrow">↗</span></span>
-          </button>
-          <div class="project-caption"><div><span class="project-number">02 /</span><h3>Zakrily</h3></div><span class="project-type">AI EDUCATION · PRODUCT PROTOTYPE</span><button class="caption-link" data-project="zakrily" aria-label="Read about Zakrily">↗</button></div>
-          <p class="project-summary">A more personal way to learn Egypt’s school curriculum.</p>
-        </article>
-
-        <article class="project project-autobrief reveal">
+        <article class="project project-autobrief">
           <button class="project-cover autobrief-cover" data-project="autobrief" aria-label="Explore Autobrief case study">
+            <span class="project-art">
             <span class="cover-topline"><span class="autobrief-brand">autobrief<span>↗</span></span><span class="cover-label">FROM SCATTERED TO STRUCTURED.</span></span>
             <span class="autobrief-headline">Good ideas.<br>Meet a clear brief.</span>
             <span class="brief-composition project-stage" aria-hidden="true"><span class="input-note note-audio"><span>▥ ▥ ▥ ▥ ▥</span><small>That 3-minute voice note.</small></span><span class="input-note note-text"><strong>“So, here’s what<br>I’m thinking…”</strong><small>THE INITIAL IDEA</small></span><span class="brief-paper"><span class="paper-top">PROJECT BRIEF <span>↗</span></span><strong>A clearer<br>starting point.</strong><span class="paper-label">01 / THE BIG IDEA</span><span class="paper-line"></span><span class="paper-line short"></span><span class="paper-label">02 / WHAT WE’RE BUILDING</span><span class="paper-line"></span><span class="paper-line"></span><span class="paper-line short"></span><span class="paper-footer">LESS BACK-AND-FORTH. MORE MAKING. <span>✳</span></span></span></span>
             <span class="cover-bottomline"><span>TEXT. AUDIO. IMAGES. CLARITY.</span><span class="cover-arrow">↗</span></span>
+            </span>
           </button>
           <div class="project-caption"><div><span class="project-number">03 /</span><h3>Autobrief</h3></div><span class="project-type">MULTIMODAL AI · WORKFLOW AUTOMATION</span><button class="caption-link" data-project="autobrief" aria-label="Read about Autobrief">↗</button></div>
           <p class="project-summary">Messy inputs become the beginning of a better project.</p>
         </article>
 
-        <article class="project project-care reveal">
-          <button class="project-cover care-cover" data-project="care" aria-label="Explore teleconsultation platform case study">
+        <article class="project project-care">
+          <button class="project-cover care-cover" data-project="care" aria-label="Explore DocLink telemedicine case study">
+            <span class="project-art">
             <span class="cover-topline"><span class="care-brand"><span>+</span> care, connected.</span><span class="cover-label">TELECONSULTATION PLATFORM</span></span>
             <span class="care-headline">A little closer<br>to better care.</span>
             <span class="project-stage care-stage">
             <span class="care-window" aria-hidden="true"><span class="care-ui-top"><span>Appointments</span><span class="care-ui-dot">● ● ●</span></span><span class="care-date">Your day, at a glance.</span><span class="calendar-strip"><span>M<em>12</em></span><span>T<em>13</em></span><span class="active">W<em>14</em></span><span>T<em>15</em></span><span>F<em>16</em></span></span><span class="appointment"><span class="doctor-avatar">+</span><span><strong>Your consultation</strong><small>10:30 AM · Video appointment</small></span><span class="video-icon">▣</span></span><span class="join-call">Join your consultation <span>↗</span></span><span class="care-ui-bottom">A simpler path from booking to conversation.</span></span>
             </span>
             <span class="care-cross" aria-hidden="true">+</span><span class="cover-bottomline"><span>SOFTWARE WITH A HUMAN SIDE.</span><span class="cover-arrow">↗</span></span>
+            </span>
           </button>
-          <div class="project-caption"><div><span class="project-number">04 /</span><h3>Teleconsultation</h3></div><span class="project-type">FULL-STACK · HEALTHCARE</span><button class="caption-link" data-project="care" aria-label="Read about the teleconsultation platform">↗</button></div>
+          <div class="project-caption"><div><span class="project-number">04 /</span><h3>DocLink</h3></div><span class="project-type">TELEMEDICINE · BACKEND</span><button class="caption-link" data-project="care" aria-label="Read about DocLink">↗</button></div>
           <p class="project-summary">Connecting the moving parts of a remote-care experience.</p>
         </article>
+      </div>
       </div>
     </section>
 
@@ -120,11 +149,387 @@
       </div>
     </section>
 
-    <section class="contact-section" id="contact" aria-labelledby="contact-title"><div class="contact-meta"><span>HAVE SOMETHING IN MIND?</span><span>LET’S MAKE IT HAPPEN.</span></div><h2 id="contact-title">An idea worth<br>building<span class="contact-star" aria-hidden="true">✳</span><span>?</span></h2><div class="contact-bottom"><a class="contact-email" href="mailto:salma.hammoouda@gmail.com">salma.hammoouda@gmail.com <span>↗</span></a><button class="copy-email" aria-label="Copy email address"><span class="copy-icon" aria-hidden="true">▣</span><span class="copy-text">COPY EMAIL</span></button></div><p class="copy-status" role="status" aria-live="polite"></p></section>
+    <section class="contact-section" id="contact" aria-labelledby="contact-title">
+      <div class="contact-meta"><span>HAVE SOMETHING IN MIND?</span><span>LET’S MAKE IT HAPPEN.</span></div>
+      <h2 id="contact-title">An idea worth<br>building<span class="contact-star" aria-hidden="true">✳</span><span>?</span></h2>
+      <div class="contact-bottom"><a class="contact-email" href="mailto:salma.hammoouda@gmail.com">salma.hammoouda@gmail.com <span>↗</span></a><button class="copy-email" aria-label="Copy email address"><span class="copy-icon" aria-hidden="true">▣</span><span class="copy-text">COPY EMAIL</span></button></div>
+      <p class="copy-status" role="status" aria-live="polite"></p>
+      <div class="contact-links" aria-label="More ways to connect">
+        <a class="contact-resource" href="https://www.linkedin.com/in/salmamedhatismail" target="_blank" rel="noopener noreferrer"><span><span class="contact-link-label">LET’S CONNECT</span><span class="contact-link-title">LinkedIn</span></span><span class="contact-link-arrow" aria-hidden="true">↗</span></a>
+        <a class="contact-resource" href="/assets/documents/salma-hammouda-cv.pdf" target="_blank" rel="noopener noreferrer"><span><span class="contact-link-label">THE FULL PICTURE · PDF</span><span class="contact-link-title">View my CV</span></span><span class="contact-link-arrow" aria-hidden="true">↗</span></a>
+        <a class="contact-resource" href="tel:+201288746476"><span><span class="contact-link-label">GIVE ME A CALL</span><span class="contact-link-title contact-phone">+20 128 874 6476</span></span><span class="contact-link-arrow" aria-hidden="true">↗</span></a>
+      </div>
+    </section>
   </main>
 
   <footer><span>© <span id="year">2026</span> SALMA HAMMOUDA</span><span>IMAGINATION, ENGINEERED.</span><a href="#home">BACK TO TOP ↑</a></footer>
   <div class="project-cursor" aria-hidden="true">VIEW<br>PROJECT <span>↗</span></div>
   <dialog class="project-dialog" aria-labelledby="dialog-title"><div class="dialog-topline"><span>SELECTED WORK / <span id="dialog-index"></span></span><button class="dialog-close" aria-label="Close project details">CLOSE <span>×</span></button></div><div class="dialog-body"><span id="dialog-category" class="eyebrow"></span><h2 id="dialog-title"></h2><p class="dialog-lead" id="dialog-lead"></p><div id="dialog-content"></div><p class="illustration-note">The portfolio artwork is an interface illustration, not a screenshot of the application.</p><a class="dialog-cta" href="mailto:salma.hammoouda@gmail.com">LET’S TALK ABOUT A SIMILAR IDEA <span>↗</span></a></div></dialog>
+
+  <template id="autobrief-case-study">
+    <div class="ab-overview">
+      <dl class="ab-facts">
+        <div><dt>MY ROLE</dt><dd>Backend &amp; AI engineering</dd></div>
+        <div><dt>COLLABORATION</dt><dd>Team of two</dd></div>
+        <div><dt>CONTEXT</dt><dd>GDG EUI Hackathon · Dec 2025</dd></div>
+      </dl>
+      <a class="ab-github" href="https://github.com/malak703/Autobrief" target="_blank" rel="noopener noreferrer">VIEW ON GITHUB <span aria-hidden="true">↗</span></a>
+    </div>
+
+    <section class="ab-summary" aria-label="Project summary">
+      <span class="case-eyebrow">THE PROJECT</span>
+      <h3 class="ab-summary-heading">Turn messy client conversations into professional briefs — in seconds.</h3>
+      <p class="ab-summary-body">Freelancers and agencies spend hours sifting through WhatsApp chats, voice notes, and screenshot references just to understand what a client actually wants. AutoBrief ingests all of that raw material, runs it through a multi-stage AI pipeline, and produces a structured, reviewable project brief — with a shareable client link, word-level diff tracking, and a final PDF proposal.</p>
+    </section>
+
+    <section class="ab-features" aria-labelledby="ab-features-title">
+      <div class="ab-section-heading">
+        <span class="case-eyebrow">01 / KEY FEATURES</span>
+        <h3 id="ab-features-title">Five capabilities.<br>One <em>end-to-end workflow.</em></h3>
+      </div>
+      <div class="ab-feature-groups">
+
+        <div class="ab-feature-group">
+          <div class="ab-group-header">
+            <span class="ab-group-icon">📂</span>
+            <span class="ab-group-title">Multi-Format Intake</span>
+          </div>
+          <ul class="ab-feature-list">
+            <li>WhatsApp / Telegram exports — .zip, .txt, or .json</li>
+            <li>Voice notes — Arabic &amp; English transcription via Groq Whisper</li>
+            <li>Screenshots &amp; images — vision OCR extracts text from mockups and design boards</li>
+            <li>Direct text paste for quick briefs</li>
+            <li>Selective processing — choose which messages and images to include</li>
+          </ul>
+        </div>
+
+        <div class="ab-feature-group">
+          <div class="ab-group-header">
+            <span class="ab-group-icon">🤖</span>
+            <span class="ab-group-title">AI Pipeline</span>
+          </div>
+          <ul class="ab-feature-list">
+            <li>Work filter — strips greetings, jokes, and off-topic messages</li>
+            <li>Brief generation — structures content into 4 sections: wants, goals, gaps, follow-up</li>
+            <li>Deadline extraction — detects dated milestones and adds them to your calendar</li>
+            <li>Proposal generation — creates polished, client-ready proposals from reviewed briefs</li>
+          </ul>
+        </div>
+
+        <div class="ab-feature-group">
+          <div class="ab-group-header">
+            <span class="ab-group-icon">👥</span>
+            <span class="ab-group-title">Client Collaboration</span>
+          </div>
+          <ul class="ab-feature-list">
+            <li>Shareable review links — branded link for client confirmation</li>
+            <li>Section-by-section approval, comments, or change requests</li>
+            <li>Word-level diff tracking — see exactly what changed</li>
+            <li>Voice feedback — clients record audio responses per section</li>
+            <li>Final proposal with PDF export</li>
+          </ul>
+        </div>
+
+        <div class="ab-feature-group">
+          <div class="ab-group-header">
+            <span class="ab-group-icon">📅</span>
+            <span class="ab-group-title">Calendar &amp; Deadlines</span>
+          </div>
+          <ul class="ab-feature-list">
+            <li>AI-extracted due dates auto-populate the calendar</li>
+            <li>Per-account isolation — each user sees only their own deadlines</li>
+            <li>Status tracking — mark as submitted or active</li>
+            <li>Manual entries alongside AI-extracted ones</li>
+          </ul>
+        </div>
+
+        <div class="ab-feature-group">
+          <div class="ab-group-header">
+            <span class="ab-group-icon">🔒</span>
+            <span class="ab-group-title">Multi-Tenant Security</span>
+          </div>
+          <ul class="ab-feature-list">
+            <li>Row Level Security — Supabase enforces data isolation at DB level</li>
+            <li>Owner-scoped queries through the business_owners → clients chain</li>
+            <li>Every mutation verifies ownership before executing</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="ab-arch" aria-labelledby="ab-arch-title">
+      <div class="ab-section-heading">
+        <span class="case-eyebrow">02 / ARCHITECTURE</span>
+        <h3 id="ab-arch-title">Three layers.<br>One <em>clean pipeline.</em></h3>
+      </div>
+      <div class="ab-arch-diagram">
+        <div class="ab-arch-layer ab-arch-frontend">
+          <span class="ab-arch-label">FRONTEND + API</span>
+          <strong>Next.js 16</strong>
+          <div class="ab-arch-modules">
+            <span>Dashboard</span><span>Briefs</span><span>Calendar</span><span>+ more</span>
+          </div>
+          <span class="ab-arch-sublabel">Server Actions · API Routes</span>
+        </div>
+        <div class="ab-arch-connectors">
+          <div class="ab-arch-arrow-pair">
+            <span class="ab-arch-arrow">↓</span>
+            <span class="ab-arch-arrow">↓</span>
+          </div>
+        </div>
+        <div class="ab-arch-bottom">
+          <div class="ab-arch-layer ab-arch-db">
+            <span class="ab-arch-label">AUTH · DB · STORAGE</span>
+            <strong>Supabase</strong>
+            <div class="ab-arch-modules">
+              <span>Users</span><span>Clients</span><span>Briefs</span><span>Deadlines</span>
+            </div>
+          </div>
+          <div class="ab-arch-layer ab-arch-ai">
+            <span class="ab-arch-label">AI BACKEND</span>
+            <strong>FastAPI (Python)</strong>
+            <div class="ab-arch-modules">
+              <span>Whisper STT</span><span>Vision OCR</span><span>LLM Filter</span><span>Brief Gen</span>
+            </div>
+            <div class="ab-arch-connector-down">↓</div>
+            <div class="ab-arch-groq">
+              <span class="ab-arch-label">LLM PROVIDER</span>
+              <strong>Groq</strong>
+              <div class="ab-arch-modules">
+                <span>LLaMA 3.1</span><span>Whisper</span><span>Vision</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ab-stack" aria-labelledby="ab-stack-title">
+      <div class="ab-section-heading">
+        <span class="case-eyebrow">03 / TECH STACK</span>
+        <h3 id="ab-stack-title">Every layer,<br><em>chosen deliberately.</em></h3>
+      </div>
+      <table class="ab-stack-table">
+        <thead>
+          <tr><th>Layer</th><th>Technology</th><th>Purpose</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Frontend</td><td>Next.js 16 · React 19 · TypeScript</td><td>App shell, SSR, server components</td></tr>
+          <tr><td>Styling</td><td>Tailwind CSS 4</td><td>Warm, professional UI aesthetic</td></tr>
+          <tr><td>Auth &amp; DB</td><td>Supabase (Auth, Postgres, Storage, RLS)</td><td>User management, data persistence</td></tr>
+          <tr><td>AI Backend</td><td>FastAPI (Python)</td><td>Voice &amp; image processing pipeline</td></tr>
+          <tr><td>LLM</td><td>Groq — LLaMA 3.1 8B Instant</td><td>Text filtering, brief generation, deadline extraction</td></tr>
+          <tr><td>Speech-to-Text</td><td>Groq Whisper Large v3</td><td>Arabic + English voice transcription</td></tr>
+          <tr><td>Vision OCR</td><td>Groq Vision — LLaMA 4 Scout</td><td>Screenshot text extraction</td></tr>
+          <tr><td>PDF Export</td><td>html2pdf.js</td><td>Client-facing proposal downloads</td></tr>
+          <tr><td>File Handling</td><td>JSZip</td><td>WhatsApp .zip export parsing</td></tr>
+        </tbody>
+      </table>
+    </section>
+  </template>
+
+  <template id="kalemly-case-study">
+    <div class="kalemly-overview">
+      <dl class="kalemly-facts">
+        <div><dt>MY ROLE</dt><dd>Full-stack development</dd></div>
+        <div><dt>CONTEXT</dt><dd>Tips Hindawi Challenge</dd></div>
+        <div><dt>DURATION</dt><dd>June — July 2026</dd></div>
+      </dl>
+      <a class="kalemly-github" href="https://lnkd.in/ew2thV3c" target="_blank" rel="noopener noreferrer">VIEW ON GITHUB <span aria-hidden="true">↗</span></a>
+    </div>
+
+    <section class="kalemly-film-section" aria-label="Project video">
+      <figure class="kalemly-film">
+        <div class="kalemly-video">
+          <iframe src="https://www.youtube-nocookie.com/embed/dBB7pbHd8RU?rel=0&playsinline=1" title="KalemlyAI — product walkthrough" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <figcaption><span>PRODUCT WALKTHROUGH</span><a href="https://www.youtube.com/watch?v=dBB7pbHd8RU" target="_blank" rel="noopener noreferrer">WATCH ON YOUTUBE <span aria-hidden="true">↗</span></a></figcaption>
+      </figure>
+      <div class="kalemly-intro">
+        <span class="case-eyebrow"><span class="kalemly-dot" aria-hidden="true"></span> TIPS HINDAWI CHALLENGE · EDRAK FOR AI</span>
+        <p class="kalemly-description">KalemlyAI lets any business upload its own documents and website content and turn that knowledge into a bilingual Arabic–English customer support assistant — one that can actually hold a conversation, remember context, and hand off to a human when it needs to.</p>
+        <div class="kalemly-langs" aria-label="Supported languages">
+          <span>Arabic · العربية</span>
+          <span>English</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="kalemly-features" aria-labelledby="kalemly-features-title">
+      <div class="kalemly-section-heading">
+        <div>
+          <span class="case-eyebrow">01 / WHAT IT DOES</span>
+          <h3 id="kalemly-features-title">Eight capabilities.<br>One <em>cohesive product.</em></h3>
+        </div>
+      </div>
+      <ul class="kalemly-feature-grid">
+        <li><span class="kf-icon">📄</span><div><strong>Multi-format ingestion</strong><p>Upload PDF, DOCX, and TXT files or paste website URLs — the platform processes and indexes all of it.</p></div></li>
+        <li><span class="kf-icon">🧠</span><div><strong>RAG-based retrieval</strong><p>A retrieval-augmented generation pipeline finds the most relevant chunks before every response, keeping answers grounded in real content.</p></div></li>
+        <li><span class="kf-icon">💬</span><div><strong>Arabic &amp; English conversations</strong><p>Responds naturally in whichever language the customer writes in — no switching required.</p></div></li>
+        <li><span class="kf-icon">🔄</span><div><strong>Multi-turn memory</strong><p>Conversation history is maintained throughout each session so context is never lost mid-thread.</p></div></li>
+        <li><span class="kf-icon">🚨</span><div><strong>Human escalation</strong><p>Automatically detects when a question is beyond its knowledge and routes the conversation to a human agent.</p></div></li>
+        <li><span class="kf-icon">🌐</span><div><strong>Embeddable widget</strong><p>Drop a script tag into any website to embed the chatbot — no rebuild required.</p></div></li>
+        <li><span class="kf-icon">📊</span><div><strong>Conversation analytics</strong><p>Full history and analytics dashboard so businesses can understand what their customers are actually asking.</p></div></li>
+        <li><span class="kf-icon">🔁</span><div><strong>Automatic LLM fallback</strong><p>When a model hits rate limits, the system silently retries with a fallback — zero downtime for the end user.</p></div></li>
+      </ul>
+    </section>
+
+    <section class="kalemly-engineering" aria-labelledby="kalemly-engineering-title">
+      <div class="kalemly-contribution">
+        <span class="case-eyebrow">02 / THE STACK</span>
+        <h3 id="kalemly-engineering-title">Built end-to-end.<br>Every layer, <em>from scratch.</em></h3>
+        <p>I designed and built the entire system — from the RAG pipeline and multi-model LLM orchestration to the frontend dashboard and embeddable widget. The project pushed well beyond calling an API: retrieval, memory, persistence, rate limits, fallbacks, and how all of it would actually hold together as a product.</p>
+      </div>
+      <dl class="kalemly-stack">
+        <div><dt>FRONTEND</dt><dd>Next.js · React · TypeScript</dd></div>
+        <div><dt>BACKEND</dt><dd>FastAPI · Python</dd></div>
+        <div><dt>AI & RETRIEVAL</dt><dd>LangChain · Groq · HuggingFace Embeddings · ChromaDB</dd></div>
+        <div><dt>PERSISTENCE</dt><dd>SQLite</dd></div>
+      </dl>
+    </section>
+
+    <section class="kalemly-moment" aria-label="Challenge highlight">
+      <div class="kalemly-moment-inner">
+        <span class="kalemly-moment-mark" aria-hidden="true">✳</span>
+        <blockquote class="kalemly-quote">
+          <p>"The judges went through the project and genuinely got excited about what I'd built. Hearing that they were impressed by the idea and the amount of work that went into it was honestly a great feeling."</p>
+        </blockquote>
+        <span class="kalemly-moment-label">TIPS HINDAWI CHALLENGE · BEST PROJECT RECOGNITION</span>
+      </div>
+    </section>
+  </template>
+
+  <template id="zakrily-case-study">
+    <section class="zakrily-story" aria-label="Introducing Zakrily">
+      <figure class="zakrily-film">
+        <div class="zakrily-video">
+          <iframe src="https://www.youtube-nocookie.com/embed/Yhtkcu3eHQs?rel=0&playsinline=1" title="Zakrily — product introduction" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <figcaption><span>MEET ZAKRILY</span><a href="https://youtu.be/Yhtkcu3eHQs" target="_blank" rel="noopener noreferrer">WATCH ON YOUTUBE <span aria-hidden="true">↗</span></a></figcaption>
+      </figure>
+      <div class="zakrily-intro">
+        <span class="case-eyebrow"><span class="startup-dot" aria-hidden="true"></span> AN EDTECH STARTUP</span>
+        <p class="zakrily-description">Zakrily (<span lang="ar" dir="rtl">ذاكريلي</span>) is an AI-powered educational web app that acts as a 24/7 private tutor for school students. It combines interactive learning paths, practice, personalized feedback, progress tracking, and AI-powered features across English, Math, and Science.</p>
+        <div class="zakrily-subjects" aria-label="Subjects"><span>English</span><span>Math</span><span>Science</span></div>
+        <a class="zakrily-prototype" href="https://zakrily.iqraxis.com" target="_blank" rel="noopener noreferrer"><span>EXPLORE THE PROTOTYPE</span><span aria-hidden="true">↗</span></a>
+        <span class="prototype-address">zakrily.iqraxis.com</span>
+      </div>
+    </section>
+
+    <section class="zakrily-deck" aria-labelledby="zakrily-deck-title">
+      <div class="zakrily-section-heading"><div><span class="case-eyebrow">01 / THE BIGGER PICTURE</span><h3 id="zakrily-deck-title">A little context.<br>A bigger <em>vision.</em></h3></div><a class="case-resource-link" href="/assets/zakrily/pitch-deck.pdf" target="_blank" rel="noopener noreferrer">OPEN THE PITCH DECK <span aria-hidden="true">↗</span></a></div>
+      <div class="deck-reader" role="region" aria-label="Zakrily pitch deck preview" aria-describedby="deck-instructions" tabindex="0">
+        <p id="deck-instructions" class="sr-only">Swipe horizontally, use the previous and next slide buttons, or press the left and right arrow keys to explore the 17-slide pitch deck.</p>
+        <figure class="deck-slide"><img class="deck-image" src="/assets/zakrily/slides/01.webp" width="1600" height="900" alt="Slide 1 of 17: Zakrily — every child learns differently" loading="lazy" decoding="async"></figure>
+        <div class="deck-toolbar"><span class="deck-label">THE PITCH <span class="deck-count" role="status" aria-live="polite" aria-atomic="true">01 / 17</span></span><div class="deck-controls"><button class="deck-prev" type="button" aria-label="Previous pitch deck slide" disabled><span aria-hidden="true">←</span></button><button class="deck-next" type="button" aria-label="Next pitch deck slide"><span aria-hidden="true">→</span></button></div></div>
+        <p class="deck-error" role="status" hidden>This slide couldn’t load. <a href="/assets/zakrily/pitch-deck.pdf" target="_blank" rel="noopener noreferrer">Open the full PDF ↗</a></p>
+      </div>
+    </section>
+
+    <section class="zakrily-team" aria-labelledby="zakrily-team-title">
+      <div class="zakrily-section-heading"><div><span class="case-eyebrow">02 / BUILT TOGETHER</span><h3 id="zakrily-team-title">Three people.<br>One <em>shared idea.</em></h3></div><span class="team-note">THE TEAM BEHIND ZAKRILY</span></div>
+      <ul class="zakrily-team-list">
+        <li><span class="team-index">01</span><h4>Salma Hammouda</h4><p>Frontend & AI</p></li>
+        <li><span class="team-index">02</span><h4>Malak Mohamed</h4><p>Frontend & AI</p></li>
+        <li><span class="team-index">03</span><h4>Moaz el H. El-Garawany</h4><p>Backend Engineer</p></li>
+      </ul>
+    </section>
+  </template>
+  <template id="doclink-case-study">
+    <div class="doclink-overview">
+      <dl class="doclink-facts"><div><dt>MY ROLE</dt><dd>Backend development</dd></div><div><dt>COLLABORATION</dt><dd>Team of two</dd></div><div><dt>STACK</dt><dd>Next.js · Prisma · PostgreSQL</dd></div></dl>
+      <a class="doclink-github" href="https://github.com/salmaaa232/DocLink" target="_blank" rel="noopener noreferrer">VIEW ON GITHUB <span aria-hidden="true">↗</span></a>
+    </div>
+
+    <section class="doclink-summary" aria-label="Project summary">
+      <div class="doclink-summary-inner">
+        <span class="case-eyebrow">THE PROJECT</span>
+        <h3>A modern telemedicine platform that makes remote care feel less remote.</h3>
+        <p>DocLink connects patients with verified doctors through secure video consultations — handling everything from profile creation and doctor discovery to credit-based booking, live video sessions, and post-appointment notes. Built as a full-featured platform with separate experiences for patients, doctors, and administrators.</p>
+      </div>
+    </section>
+
+    <section class="doclink-screens" aria-label="Application screens">
+      <div class="doclink-screens-heading">
+        <span class="case-eyebrow">01 / THE PRODUCT IN ACTION</span>
+        <h3>Three views.<br>One connected experience.</h3>
+      </div>
+      <div class="doclink-grid">
+        <figure class="doclink-grid-item">
+          <a class="doclink-image-link" href="/assets/doclink/home.png" target="_blank" rel="noopener noreferrer" aria-label="Open DocLink home screen at full size">
+            <img src="/assets/doclink/home.png" width="2688" height="1246" alt="DocLink home screen introducing doctor discovery, appointment booking, and video consultations." decoding="async">
+          </a>
+          <figcaption><span class="doclink-screen-number">01 /</span> Healthcare, brought closer.<a class="doclink-fullsize" href="/assets/doclink/home.png" target="_blank" rel="noopener noreferrer" aria-label="View full-size">↗</a></figcaption>
+        </figure>
+        <figure class="doclink-grid-item">
+          <a class="doclink-image-link" href="/assets/doclink/doctor-discovery.png" target="_blank" rel="noopener noreferrer" aria-label="Open doctor discovery screen at full size">
+            <img src="/assets/doclink/doctor-discovery.png" width="2762" height="1468" alt="Doctor discovery screen with specialties including general medicine, cardiology, dermatology, and neurology." loading="lazy" decoding="async">
+          </a>
+          <figcaption><span class="doclink-screen-number">02 /</span> Find the right specialty.<a class="doclink-fullsize" href="/assets/doclink/doctor-discovery.png" target="_blank" rel="noopener noreferrer" aria-label="View full-size">↗</a></figcaption>
+        </figure>
+        <figure class="doclink-grid-item doclink-grid-item--wide">
+          <a class="doclink-image-link" href="/assets/doclink/booking.png" target="_blank" rel="noopener noreferrer" aria-label="Open appointment booking screen at full size">
+            <img src="/assets/doclink/booking.png" width="2380" height="1288" alt="Appointment booking screen showing a doctor's profile, date selection, and available consultation times." loading="lazy" decoding="async">
+          </a>
+          <figcaption><span class="doclink-screen-number">03 /</span> A clear path to an appointment.<a class="doclink-fullsize" href="/assets/doclink/booking.png" target="_blank" rel="noopener noreferrer" aria-label="View full-size">↗</a></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="doclink-features" aria-labelledby="doclink-features-title">
+      <div class="doclink-features-heading">
+        <span class="case-eyebrow">02 / PLATFORM FEATURES</span>
+        <h3 id="doclink-features-title">Built for every<br>person in the room.</h3>
+      </div>
+      <div class="doclink-feature-groups">
+        <div class="doclink-feature-group">
+          <span class="doclink-feature-label">FOR PATIENTS</span>
+          <ul class="doclink-feature-list">
+            <li>Easy profile creation and personalised healthcare setup</li>
+            <li>Doctor discovery by specialty and availability</li>
+            <li>Secure, high-quality video consultations</li>
+            <li>Flexible credit system with transparent pricing</li>
+            <li>Access to appointment history and doctor's notes</li>
+            <li>Real-time schedule visibility and instant booking</li>
+          </ul>
+        </div>
+        <div class="doclink-feature-group">
+          <span class="doclink-feature-label">FOR DOCTORS</span>
+          <ul class="doclink-feature-list">
+            <li>Professional profile with specialty and credentials</li>
+            <li>Schedule management and appointment slot control</li>
+            <li>Encrypted video consultation sessions</li>
+            <li>Earnings dashboard and payout tracking</li>
+            <li>Verified professional status to build patient trust</li>
+          </ul>
+        </div>
+        <div class="doclink-feature-group">
+          <span class="doclink-feature-label">FOR ADMINS</span>
+          <ul class="doclink-feature-list">
+            <li>Full user management across patients and doctors</li>
+            <li>Doctor credential review and verification</li>
+            <li>PayPal-integrated payout processing</li>
+            <li>Platform analytics and health monitoring</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="doclink-engineering" aria-labelledby="doclink-engineering-title">
+      <div class="doclink-contribution">
+        <span class="case-eyebrow">03 / BEHIND THE EXPERIENCE</span>
+        <h3 id="doclink-engineering-title">The backend<br>connecting it <em>all.</em></h3>
+        <p>I worked on backend development as part of a team of two. The platform brings together role-based access, scheduling, consultation credits, and video sessions — all wired through a type-safe Prisma schema and validated end-to-end with Zod. Vonage Video API powers the real-time consultation layer, while Clerk handles auth across all three user roles.</p>
+      </div>
+      <dl class="doclink-stack">
+        <div><dt>FRONTEND</dt><dd>Next.js 16 · React 19 · Tailwind CSS · Radix UI · Clerk</dd></div>
+        <div><dt>BACKEND & DATA</dt><dd>Prisma ORM · PostgreSQL · Next.js API Routes · Zod</dd></div>
+        <div><dt>VIDEO & COMMUNICATION</dt><dd>Vonage Video API · OpenTok</dd></div>
+        <div><dt>PLATFORM OPERATIONS</dt><dd>Doctor verification · PayPal payout integration</dd></div>
+        <div><dt>TOOLING</dt><dd>TypeScript · ESLint · Turbo</dd></div>
+      </dl>
+    </section>
+  </template>
 </body>
 </html>

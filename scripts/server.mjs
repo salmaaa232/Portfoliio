@@ -3,7 +3,7 @@ import { readFile, stat } from 'node:fs/promises';
 import { resolve, extname, sep } from 'node:path';
 const root = resolve(process.argv[2] || '.');
 const port = Number(process.env.PORT || 5173);
-const mime = { '.html': 'text/html; charset=utf-8', '.css': 'text/css; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.svg': 'image/svg+xml' };
+const mime = { '.html': 'text/html; charset=utf-8', '.css': 'text/css; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.svg': 'image/svg+xml', '.pdf': 'application/pdf', '.webp': 'image/webp', '.png': 'image/png' };
 http.createServer(async (req, res) => {
   try {
     const url = new URL(req.url, 'http://localhost');
